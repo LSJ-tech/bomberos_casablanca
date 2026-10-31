@@ -241,6 +241,74 @@ section {
   background: var(--blanco);
 }
 
+/* ---------- Franja de estadísticas ---------- */
+
+.stats-strip {
+  background: linear-gradient(135deg, var(--rojo-bombero-oscuro) 0%, var(--negro) 100%);
+  color: var(--blanco);
+  padding: 2.5rem 0;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1.5rem;
+  text-align: center;
+}
+
+.stat-item .stat-number {
+  display: block;
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--dorado-claro);
+  line-height: 1.1;
+}
+
+.stat-item .stat-label {
+  font-size: 0.85rem;
+  color: #e6d9c2;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+/* ---------- ¿Qué hacemos? ---------- */
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.service-card {
+  background: var(--blanco);
+  border-radius: 10px;
+  box-shadow: 0 4px 14px var(--sombra);
+  padding: 1.5rem;
+  text-align: center;
+  border-bottom: 4px solid var(--dorado);
+  transition: transform 0.2s;
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+}
+
+.service-card .service-icon {
+  font-size: 1.8rem;
+  margin-bottom: 0.6rem;
+}
+
+.service-card h3 {
+  color: var(--rojo-bombero);
+  font-size: 1.05rem;
+  margin-bottom: 0.4rem;
+}
+
+.service-card p {
+  font-size: 0.88rem;
+  color: #555;
+}
+
 /* ---------- Tarjetas info institucional ---------- */
 
 .info-card {
