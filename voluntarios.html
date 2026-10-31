@@ -1,49 +1,16 @@
+---
+title: Hazte Voluntario | Cuerpo de Bomberos de Casablanca
+description: Súmate como voluntario al Cuerpo de Bomberos de Casablanca.
+nav: voluntarios
+---
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hazte Voluntario | Cuerpo de Bomberos de Casablanca</title>
-  <meta name="description" content="Súmate como voluntario al Cuerpo de Bomberos de Casablanca.">
-
-  <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Cuerpo de Bomberos de Casablanca">
-  <meta property="og:title" content="Hazte Voluntario | Cuerpo de Bomberos de Casablanca">
-  <meta property="og:description" content="Súmate como voluntario al Cuerpo de Bomberos de Casablanca.">
-  <meta property="og:image" content="https://bomberoscasablanca.devquad.cl/img/logo.jpeg">
-  <meta property="og:url" content="https://bomberoscasablanca.devquad.cl/voluntarios.html">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Hazte Voluntario | Cuerpo de Bomberos de Casablanca">
-  <meta name="twitter:description" content="Súmate como voluntario al Cuerpo de Bomberos de Casablanca.">
-  <meta name="twitter:image" content="https://bomberoscasablanca.devquad.cl/img/logo.jpeg">
-
-  <link rel="icon" href="img/logo.jpeg">
-  <link rel="stylesheet" href="css/style.css">
+{% include head.html %}
 </head>
 <body>
 
-  <header class="site-header">
-    <div class="header-bar">
-      <a href="index.html" class="brand">
-        <img src="img/logo.jpeg" alt="Escudo Cuerpo de Bomberos de Casablanca">
-        <div class="brand-text">
-          <h1>Bomberos de Casablanca</h1>
-          <span>Fundado el 22-04-1949</span>
-        </div>
-      </a>
-      <button class="nav-toggle" aria-label="Abrir menú">&#9776;</button>
-      <nav class="main-nav">
-        <ul>
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="historia.html">Historia</a></li>
-          <li><a href="companias.html">Compañías</a></li>
-          <li><a href="galeria.html">Galería</a></li>
-          <li><a href="voluntarios.html">Hazte Voluntario</a></li>
-          <li><a href="contacto.html">Contacto</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+{% include header.html %}
 
   <section class="hero" style="padding: 3rem 1.25rem;">
     <div class="container">
@@ -120,39 +87,6 @@
     </div>
   </section>
 
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div>
-          <h4>Cuerpo de Bomberos de Casablanca</h4>
-          <p>Fundado el 22-04-1949. Al servicio voluntario de la comunidad de Casablanca.</p>
-        </div>
-        <div>
-          <h4>Navegación</h4>
-          <ul>
-            <li><a href="historia.html">Historia</a></li>
-            <li><a href="companias.html">Compañías</a></li>
-            <li><a href="galeria.html">Galería</a></li>
-            <li><a href="voluntarios.html">Hazte Voluntario</a></li>
-            <li><a href="privacidad.html">Política de Privacidad</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4>Contacto</h4>
-          <ul>
-            <li>Alejandro Galaz 320, Sector El Molino</li>
-            <li>(32) 2742366</li>
-            <li>www.bomberoscasablanca.cl</li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        &copy; <span id="anio"></span> Cuerpo de Bomberos de Casablanca. Todos los derechos reservados.
-      </div>
-    </div>
-  </footer>
-
-  <script src="js/script.js"></script>
-  <script>document.getElementById('anio').textContent = new Date().getFullYear();</script>
+{% include footer.html %}
 </body>
 </html>

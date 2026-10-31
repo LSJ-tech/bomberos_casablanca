@@ -1,0 +1,22 @@
+<header class="site-header">
+  <div class="header-bar">
+    <a href="index.html" class="brand">
+      <img src="img/logo.jpeg" alt="Escudo Cuerpo de Bomberos de Casablanca">
+      <div class="brand-text">
+        <h1>Bomberos de Casablanca</h1>
+        <span>Fundado el 22-04-1949</span>
+      </div>
+    </a>
+    <button class="nav-toggle" aria-label="Abrir menú">&#9776;</button>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html"{% if page.nav == 'inicio' %} class="active"{% endif %}>Inicio</a></li>
+        <li><a href="historia.html"{% if page.nav == 'historia' %} class="active"{% endif %}>Historia</a></li>
+        <li><a href="companias.html"{% if page.nav == 'companias' %} class="active"{% endif %}>Compañías</a></li>
+        <li><a href="galeria.html"{% if page.nav == 'galeria' %} class="active"{% endif %}>Galería</a></li>
+        <li><a href="voluntarios.html"{% if page.nav == 'voluntarios' %} class="active"{% endif %}>Hazte Voluntario</a></li>
+        <li><a href="contacto.html"{% if page.nav == 'contacto' %} class="active"{% endif %}>Contacto</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
