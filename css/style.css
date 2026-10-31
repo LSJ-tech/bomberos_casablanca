@@ -120,8 +120,7 @@ ul {
   align-items: center;
   gap: 0.9rem;
   color: var(--ivory);
-  min-width: 0;
-  flex-shrink: 1;
+  flex-shrink: 0;
 }
 
 .brand img {
@@ -132,10 +131,6 @@ ul {
   padding: 2px;
   box-shadow: 0 0 0 2px var(--brass);
   flex-shrink: 0;
-}
-
-.brand-text {
-  min-width: 0;
 }
 
 .brand-text h1 {
