@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hazte Voluntario | Cuerpo de Bomberos de Casablanca</title>
+  <link rel="icon" href="img/logo.jpeg">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-bar">
+      <a href="index.html" class="brand">
+        <img src="img/logo.jpeg" alt="Escudo Cuerpo de Bomberos de Casablanca">
+        <div class="brand-text">
+          <h1>Bomberos de Casablanca</h1>
+          <span>Fundado el 22-04-1949</span>
+        </div>
+      </a>
+      <button class="nav-toggle" aria-label="Abrir menú">&#9776;</button>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="historia.html">Historia</a></li>
+          <li><a href="companias.html">Compañías</a></li>
+          <li><a href="galeria.html">Galería</a></li>
+          <li><a href="voluntarios.html">Hazte Voluntario</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" style="padding: 3rem 1.25rem;">
+    <div class="container">
+      <h2>Hazte Voluntario</h2>
+      <p>Súmate a la labor voluntaria más antigua y noble de Chile. Sirve a tu comunidad.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-title">
+        <h2>Requisitos Generales</h2>
+        <p class="placeholder-note">[PENDIENTE: confirmar requisitos específicos del Cuerpo de Bomberos de Casablanca]</p>
+      </div>
+
+      <ul class="requisitos" style="max-width:640px; margin: 0 auto 2.5rem;">
+        <li>Ser mayor de 16 años (menores con autorización de apoderado).</li>
+        <li>Residir en la comuna de Casablanca o sus alrededores.</li>
+        <li>Gozar de buena salud compatible con el servicio bomberil.</li>
+        <li>No contar con antecedentes penales.</li>
+        <li>Disponibilidad para asistir a instrucción y actos de servicio.</li>
+      </ul>
+
+      <div class="form-box">
+        <h3 style="color: var(--rojo-bombero); margin-bottom: 1.2rem;">Formulario de Postulación</h3>
+
+        <div id="form-mensaje" style="display:none; background:#e8f5e9; color:#2e7d32; padding:0.8rem 1rem; border-radius:6px; margin-bottom:1.2rem;">
+          ¡Gracias por tu interés! Nos pondremos en contacto contigo pronto.
+          <br><small>[PENDIENTE: este formulario aún no envía datos a un servidor real — conectarlo a un correo o backend antes de publicar.]</small>
+        </div>
+
+        <form id="form-voluntario">
+          <div class="form-group">
+            <label for="nombre">Nombre completo</label>
+            <input type="text" id="nombre" name="nombre" required>
+          </div>
+          <div class="form-group">
+            <label for="edad">Edad</label>
+            <input type="number" id="edad" name="edad" min="16" max="99" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Correo electrónico</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="telefono">Teléfono</label>
+            <input type="tel" id="telefono" name="telefono" required>
+          </div>
+          <div class="form-group">
+            <label for="compania">Compañía de interés (opcional)</label>
+            <select id="compania" name="compania">
+              <option value="">Sin preferencia</option>
+              <option value="1">1ª Compañía</option>
+              <option value="2">2ª Compañía</option>
+              <option value="3">3ª Compañía</option>
+              <option value="4">4ª Compañía</option>
+              <option value="5">5ª Compañía</option>
+              <option value="6">6ª Compañía</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="mensaje">Cuéntanos por qué quieres ser voluntario</label>
+            <textarea id="mensaje" name="mensaje" rows="4"></textarea>
+          </div>
+          <div class="form-group" style="display:flex; align-items:flex-start; gap:0.6rem;">
+            <input type="checkbox" id="consentimiento" name="consentimiento" required style="width:auto; margin-top:0.3rem;">
+            <label for="consentimiento" style="font-weight:400; margin-bottom:0;">
+              He leído y acepto la <a href="privacidad.html" target="_blank" style="color: var(--rojo-bombero); font-weight:700;">Política de Privacidad</a>,
+              y autorizo el uso de mis datos solo para evaluar esta postulación.
+            </label>
+          </div>
+          <button type="submit" class="btn">Enviar Postulación</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>Cuerpo de Bomberos de Casablanca</h4>
+          <p>Fundado el 22-04-1949. Al servicio voluntario de la comunidad de Casablanca.</p>
+        </div>
+        <div>
+          <h4>Navegación</h4>
+          <ul>
+            <li><a href="historia.html">Historia</a></li>
+            <li><a href="companias.html">Compañías</a></li>
+            <li><a href="galeria.html">Galería</a></li>
+            <li><a href="voluntarios.html">Hazte Voluntario</a></li>
+            <li><a href="privacidad.html">Política de Privacidad</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contacto</h4>
+          <ul>
+            <li>Alejandro Galaz 320, Sector El Molino</li>
+            <li>(32) 2742366</li>
+            <li>www.bomberoscasablanca.cl</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; <span id="anio"></span> Cuerpo de Bomberos de Casablanca. Todos los derechos reservados.
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <script>document.getElementById('anio').textContent = new Date().getFullYear();</script>
+</body>
+</html>
