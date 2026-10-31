@@ -12,7 +12,7 @@ nav: voluntarios
 
 {% include header.html %}
 
-  <section class="hero" style="padding: 3rem 1.25rem;">
+  <section class="hero-pagina">
     <div class="container">
       <h2>Hazte Voluntario</h2>
       <p>Súmate a la labor voluntaria más antigua y noble de Chile. Sirve a tu comunidad.</p>
@@ -20,24 +20,24 @@ nav: voluntarios
   </section>
 
   <section>
-    <div class="container">
-      <div class="section-title">
+    <div class="container-angosto">
+      <div class="section-title centrado">
         <h2>Requisitos Generales</h2>
         <p class="placeholder-note">[PENDIENTE: confirmar requisitos específicos del Cuerpo de Bomberos de Casablanca]</p>
       </div>
 
-      <ul class="requisitos" style="max-width:640px; margin: 0 auto 2.5rem;">
-        <li>Ser mayor de 16 años (menores con autorización de apoderado).</li>
-        <li>Residir en la comuna de Casablanca o sus alrededores.</li>
-        <li>Gozar de buena salud compatible con el servicio bomberil.</li>
-        <li>No contar con antecedentes penales.</li>
-        <li>Disponibilidad para asistir a instrucción y actos de servicio.</li>
+      <ul class="requisitos" style="margin-bottom:3rem;">
+        <li>{% include cruz.html %}<span>Ser mayor de 16 años (menores con autorización de apoderado).</span></li>
+        <li>{% include cruz.html %}<span>Residir en la comuna de Casablanca o sus alrededores.</span></li>
+        <li>{% include cruz.html %}<span>Gozar de buena salud compatible con el servicio bomberil.</span></li>
+        <li>{% include cruz.html %}<span>No contar con antecedentes penales.</span></li>
+        <li>{% include cruz.html %}<span>Disponibilidad para asistir a instrucción y actos de servicio.</span></li>
       </ul>
 
       <div class="form-box">
-        <h3 style="color: var(--rojo-bombero); margin-bottom: 1.2rem;">Formulario de Postulación</h3>
+        <h3 style="color: var(--garnet); margin-bottom: 1.2rem;">Formulario de Postulación</h3>
 
-        <div id="form-mensaje" style="display:none; background:#e8f5e9; color:#2e7d32; padding:0.8rem 1rem; border-radius:6px; margin-bottom:1.2rem;">
+        <div id="form-mensaje" style="display:none; background:#e8f5e9; color:#2e7d32; padding:0.8rem 1rem; border-radius:3px; margin-bottom:1.2rem;">
           ¡Gracias por tu interés! Nos pondremos en contacto contigo pronto.
           <br><small>[PENDIENTE: este formulario aún no envía datos a un servidor real — conectarlo a un correo o backend antes de publicar.]</small>
         </div>
@@ -77,7 +77,7 @@ nav: voluntarios
           <div class="form-group" style="display:flex; align-items:flex-start; gap:0.6rem;">
             <input type="checkbox" id="consentimiento" name="consentimiento" required style="width:auto; margin-top:0.3rem;">
             <label for="consentimiento" style="font-weight:400; margin-bottom:0;">
-              He leído y acepto la <a href="privacidad.html" target="_blank" style="color: var(--rojo-bombero); font-weight:700;">Política de Privacidad</a>,
+              He leído y acepto la <a href="privacidad.html" target="_blank" style="color: var(--garnet); font-weight:700; border-bottom: 1px solid var(--brass);">Política de Privacidad</a>,
               y autorizo el uso de mis datos solo para evaluar esta postulación.
             </label>
           </div>

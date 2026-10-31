@@ -12,7 +12,7 @@ nav: companias
 
 {% include header.html %}
 
-  <section class="hero" style="padding: 3rem 1.25rem;">
+  <section class="hero-pagina">
     <div class="container">
       <h2>Nuestras Compañías</h2>
       <p>Cada compañía aporta su historia y vocación al servicio de Casablanca.</p>
@@ -20,35 +20,50 @@ nav: companias
   </section>
 
   <section>
-    <div class="container">
-      <p class="placeholder-note" style="text-align:center; margin-bottom:2rem;">
+    <div class="container-angosto">
+      <p class="placeholder-note" style="margin-bottom:1.5rem;">
         [PENDIENTE: confirmar fecha de fundación y dirección de cada compañía.]
       </p>
 
-      <div class="companias-grid">
-        <a href="primera-compania.html" class="compania-card">
-          <h3>Primera Compañía</h3>
-          <p class="placeholder-note">[PENDIENTE: fundación, dirección]</p>
+      <div class="roster">
+        <a href="primera-compania.html" class="roster-fila">
+          <span class="roster-numero">I</span>
+          <div class="roster-info">
+            <h3>Primera Compañía</h3>
+            <p class="placeholder-note">Fundación y dirección pendientes</p>
+          </div>
         </a>
 
-        <a href="segunda-compania.html" class="compania-card">
-          <h3>Segunda Compañía</h3>
-          <p class="placeholder-note">[PENDIENTE: fundación, dirección]</p>
+        <a href="segunda-compania.html" class="roster-fila">
+          <span class="roster-numero">II</span>
+          <div class="roster-info">
+            <h3>Segunda Compañía</h3>
+            <p class="placeholder-note">Fundación y dirección pendientes</p>
+          </div>
         </a>
 
-        <a href="tercera-compania.html" class="compania-card">
-          <h3>Tercera Compañía</h3>
-          <p class="placeholder-note">[PENDIENTE: fundación, dirección]</p>
+        <a href="tercera-compania.html" class="roster-fila">
+          <span class="roster-numero">III</span>
+          <div class="roster-info">
+            <h3>Tercera Compañía</h3>
+            <p class="placeholder-note">Fundación y dirección pendientes</p>
+          </div>
         </a>
 
-        <a href="cuarta-compania.html" class="compania-card">
-          <h3>Cuarta Compañía</h3>
-          <p class="placeholder-note">[PENDIENTE: fundación, dirección]</p>
+        <a href="cuarta-compania.html" class="roster-fila">
+          <span class="roster-numero">IV</span>
+          <div class="roster-info">
+            <h3>Cuarta Compañía</h3>
+            <p class="placeholder-note">Fundación y dirección pendientes</p>
+          </div>
         </a>
 
-        <a href="brigada-las-dichas.html" class="compania-card">
-          <h3>Brigada Las Dichas</h3>
-          <p class="placeholder-note">[PENDIENTE: fundación, dirección]</p>
+        <a href="brigada-las-dichas.html" class="roster-fila">
+          <span class="roster-cruz">{% include cruz.html size=26 %}</span>
+          <div class="roster-info">
+            <h3>Brigada Las Dichas</h3>
+            <p class="placeholder-note">Fundación y dirección pendientes</p>
+          </div>
         </a>
       </div>
     </div>

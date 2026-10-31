@@ -12,33 +12,39 @@ nav: inicio
 
 {% include header.html %}
 
-  <section class="hero">
+  <section class="hero-ceremonial">
     <div class="container">
+      <div class="cresta-wrap">
+        <span class="cresta-anillo" aria-hidden="true"></span>
+        <img src="img/logo.jpeg" alt="Escudo Cuerpo de Bomberos de Casablanca">
+      </div>
       <h2>Al servicio de Casablanca desde 1949</h2>
       <p>77 años protegiendo a nuestra comunidad con vocación, disciplina y entrega voluntaria. Conoce nuestra historia, nuestras compañías y súmate como voluntario.</p>
-      <a href="voluntarios.html" class="btn">Hazte Voluntario</a>
-      <a href="historia.html" class="btn btn-outline" style="margin-left: 0.8rem;">Nuestra Historia</a>
+      <div class="hero-acciones">
+        <a href="voluntarios.html" class="btn">Hazte Voluntario</a>
+        <a href="historia.html" class="btn btn-outline">Nuestra Historia</a>
+      </div>
     </div>
   </section>
 
-  <section class="stats-strip">
+  <section class="ledger">
     <div class="container">
-      <div class="stats-grid">
-        <div class="stat-item">
-          <span class="stat-number">77</span>
-          <span class="stat-label">Años de Servicio</span>
+      <div class="ledger-grid">
+        <div class="ledger-item">
+          <span class="ledger-number">77</span>
+          <span class="ledger-label">Años de Servicio</span>
         </div>
-        <div class="stat-item">
-          <span class="stat-number">4</span>
-          <span class="stat-label">Compañías</span>
+        <div class="ledger-item">
+          <span class="ledger-number">4</span>
+          <span class="ledger-label">Compañías</span>
         </div>
-        <div class="stat-item">
-          <span class="stat-number">1</span>
-          <span class="stat-label">Brigada</span>
+        <div class="ledger-item">
+          <span class="ledger-number">1</span>
+          <span class="ledger-label">Brigada</span>
         </div>
-        <div class="stat-item">
-          <span class="stat-number">100%</span>
-          <span class="stat-label">Voluntario(a)s</span>
+        <div class="ledger-item">
+          <span class="ledger-number">100%</span>
+          <span class="ledger-label">Voluntario(a)s</span>
         </div>
       </div>
     </div>
@@ -46,13 +52,13 @@ nav: inicio
 
   <section>
     <div class="container">
-      <div class="section-title">
+      <div class="section-title centrado">
         <h2>Información Institucional</h2>
         <p>Datos generales del Cuerpo de Bomberos de Casablanca</p>
       </div>
 
-      <dl class="info-card">
-        <div>
+      <dl class="placa placa-grid">
+        <div class="placa-col">
           <dt>Cuerpo de Bomberos</dt>
           <dd>Casablanca</dd>
           <dt>Fecha de Fundación</dt>
@@ -60,7 +66,7 @@ nav: inicio
           <dt>Número de Compañías</dt>
           <dd>6</dd>
         </div>
-        <div>
+        <div class="placa-col">
           <dt>Superintendente</dt>
           <dd>Gastón Marcelo Mercado Oyarzún</dd>
           <dt>Comandante</dt>
@@ -68,49 +74,60 @@ nav: inicio
           <dt>Comunas Atendidas</dt>
           <dd>Casablanca</dd>
         </div>
-        <div>
+        <div class="placa-col">
           <dt>Dirección</dt>
           <dd>Alejandro Galaz 320, Sector El Molino, Casablanca</dd>
           <dt>Teléfono</dt>
           <dd>(32) 2742366</dd>
           <dt>Sitio Web Oficial</dt>
-          <dd><a href="https://www.bomberoscasablanca.cl" target="_blank" rel="noopener">www.bomberoscasablanca.cl</a></dd>
+          <dd><a href="https://www.bomberoscasablanca.cl" target="_blank" rel="noopener" style="color: var(--garnet); font-weight: 600;">www.bomberoscasablanca.cl</a></dd>
         </div>
       </dl>
     </div>
   </section>
 
   <section class="alt-bg">
-    <div class="container">
-      <div class="section-title">
+    <div class="container servicios-layout">
+      <div class="servicios-intro">
         <h2>¿Qué Hacemos?</h2>
-        <p class="placeholder-note">[PENDIENTE: confirmar qué especialidades/equipos tiene realmente el Cuerpo de Casablanca; estas son las áreas generales de todo Cuerpo de Bomberos en Chile]</p>
+        <p>Áreas generales de servicio de un Cuerpo de Bomberos en Chile.</p>
+        <p class="placeholder-note" style="margin-top:0.75rem;">[PENDIENTE: confirmar qué especialidades/equipos tiene realmente el Cuerpo de Casablanca]</p>
       </div>
-      <div class="services-grid">
-        <div class="service-card">
-          <div class="service-icon">&#128293;</div>
-          <h3>Incendios Estructurales</h3>
-          <p>Combate de incendios en viviendas, comercios e industrias.</p>
+      <div class="servicios-lista">
+        <div class="servicio-fila">
+          {% include cruz.html %}
+          <div>
+            <h3>Incendios Estructurales</h3>
+            <p>Combate de incendios en viviendas, comercios e industrias.</p>
+          </div>
         </div>
-        <div class="service-card">
-          <div class="service-icon">&#127795;</div>
-          <h3>Incendios Forestales</h3>
-          <p>Control de incendios forestales y de pastizales en la comuna.</p>
+        <div class="servicio-fila">
+          {% include cruz.html %}
+          <div>
+            <h3>Incendios Forestales</h3>
+            <p>Control de incendios forestales y de pastizales en la comuna.</p>
+          </div>
         </div>
-        <div class="service-card">
-          <div class="service-icon">&#128663;</div>
-          <h3>Rescate Vehicular</h3>
-          <p>Atención de accidentes de tránsito y rescate de personas atrapadas.</p>
+        <div class="servicio-fila">
+          {% include cruz.html %}
+          <div>
+            <h3>Rescate Vehicular</h3>
+            <p>Atención de accidentes de tránsito y rescate de personas atrapadas.</p>
+          </div>
         </div>
-        <div class="service-card">
-          <div class="service-icon">&#9888;</div>
-          <h3>Materiales Peligrosos</h3>
-          <p>Respuesta ante derrames y emergencias con sustancias peligrosas.</p>
+        <div class="servicio-fila">
+          {% include cruz.html %}
+          <div>
+            <h3>Materiales Peligrosos</h3>
+            <p>Respuesta ante derrames y emergencias con sustancias peligrosas.</p>
+          </div>
         </div>
-        <div class="service-card">
-          <div class="service-icon">&#127959;</div>
-          <h3>Apoyo en Emergencias</h3>
-          <p>Colaboración en catástrofes, rescates y otras emergencias comunales.</p>
+        <div class="servicio-fila">
+          {% include cruz.html %}
+          <div>
+            <h3>Apoyo en Emergencias</h3>
+            <p>Colaboración en catástrofes, rescates y otras emergencias comunales.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -118,13 +135,13 @@ nav: inicio
 
   <section>
     <div class="container">
-      <div class="section-title">
+      <div class="section-title centrado">
         <h2>Nuestras Compañías</h2>
         <p>Al servicio de la comuna de Casablanca</p>
       </div>
-      <p style="text-align:center; max-width:640px; margin:0 auto 2rem;">
+      <p style="text-align:center; max-width:560px; margin:0 auto;">
         El Cuerpo de Bomberos de Casablanca está conformado por 4 compañías y la Brigada Las Dichas.
-        <a href="companias.html" style="color: var(--rojo-bombero); font-weight:700;">Conoce el detalle de cada una →</a>
+        <a href="companias.html" style="color: var(--garnet); font-weight:700; border-bottom: 1px solid var(--brass);">Conoce el detalle de cada una</a>
       </p>
     </div>
   </section>
