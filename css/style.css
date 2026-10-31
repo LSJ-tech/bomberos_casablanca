@@ -35,10 +35,11 @@ html {
 
   :root {
     --duracion-transicion: 0.01ms;
+    --anillo-animacion: none;
   }
 
   .cresta-anillo {
-    animation: none !important;
+    opacity: 1;
   }
 }
 
@@ -248,7 +249,7 @@ ul {
   border: 1px solid var(--brass);
   border-radius: 50%;
   opacity: 0;
-  animation: anillo-revela 1.1s ease-out 0.15s forwards;
+  animation: var(--anillo-animacion, anillo-revela) 1.1s ease-out 0.15s forwards;
 }
 
 @keyframes anillo-revela {
