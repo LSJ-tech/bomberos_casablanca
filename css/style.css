@@ -10,6 +10,7 @@
   --gris-claro: #f4f4f2;
   --blanco: #ffffff;
   --sombra: rgba(0, 0, 0, 0.15);
+  --duracion-transicion: 0.2s;
 }
 
 * {
@@ -27,13 +28,8 @@ html {
     scroll-behavior: auto;
   }
 
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
+  :root {
+    --duracion-transicion: 0.01ms;
   }
 }
 
@@ -130,7 +126,7 @@ ul {
   font-size: 0.92rem;
   padding: 0.4rem 0.2rem;
   border-bottom: 2px solid transparent;
-  transition: border-color 0.2s, color 0.2s;
+  transition: border-color var(--duracion-transicion), color var(--duracion-transicion);
 }
 
 .main-nav a:hover,
@@ -148,7 +144,7 @@ ul {
     width: 100%;
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.3s ease;
+    transition: max-height var(--duracion-transicion) ease;
     background: var(--rojo-bombero-oscuro);
   }
 
@@ -198,7 +194,7 @@ ul {
   font-weight: 700;
   padding: 0.7rem 1.6rem;
   border-radius: 999px;
-  transition: background 0.2s, transform 0.2s;
+  transition: background var(--duracion-transicion), transform var(--duracion-transicion);
 }
 
 .btn:hover {
@@ -301,7 +297,7 @@ section {
   padding: 1.5rem;
   text-align: center;
   border-bottom: 4px solid var(--dorado);
-  transition: transform 0.2s;
+  transition: transform var(--duracion-transicion);
 }
 
 .service-card:hover {
@@ -364,7 +360,7 @@ section {
   box-shadow: 0 4px 14px var(--sombra);
   padding: 1.5rem;
   border-left: 5px solid var(--rojo-bombero);
-  transition: transform 0.2s;
+  transition: transform var(--duracion-transicion);
 }
 
 .compania-card:hover {
