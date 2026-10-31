@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brigada Las Dichas | Cuerpo de Bomberos de Casablanca</title>
+  <link rel="icon" href="img/logo.jpeg">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-bar">
+      <a href="index.html" class="brand">
+        <img src="img/logo.jpeg" alt="Escudo Cuerpo de Bomberos de Casablanca">
+        <div class="brand-text">
+          <h1>Bomberos de Casablanca</h1>
+          <span>Fundado el 22-04-1949</span>
+        </div>
+      </a>
+      <button class="nav-toggle" aria-label="Abrir menú">&#9776;</button>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="historia.html">Historia</a></li>
+          <li><a href="companias.html" class="active">Compañías</a></li>
+          <li><a href="galeria.html">Galería</a></li>
+          <li><a href="voluntarios.html">Hazte Voluntario</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" style="padding: 3rem 1.25rem;">
+    <div class="container">
+      <h2>Brigada Las Dichas</h2>
+      <p>Al servicio de Casablanca.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container" style="max-width: 820px;">
+      <p style="margin-bottom:1.5rem;"><a href="companias.html" style="color: var(--rojo-bombero); font-weight:700;">&larr; Volver a Compañías</a></p>
+
+      <dl class="info-card" style="margin-bottom:2.5rem;">
+        <div>
+          <dt>Fecha de Fundación</dt>
+          <dd class="placeholder-note">[PENDIENTE]</dd>
+          <dt>Dirección / Cuartel</dt>
+          <dd class="placeholder-note">[PENDIENTE]</dd>
+        </div>
+        <div>
+          <dt>Capitán</dt>
+          <dd class="placeholder-note">[PENDIENTE]</dd>
+          <dt>Especialidad</dt>
+          <dd class="placeholder-note">[PENDIENTE]</dd>
+        </div>
+      </dl>
+
+      <h3 style="color: var(--rojo-bombero); margin-bottom:0.6rem;">Reseña</h3>
+      <p class="placeholder-note">
+        [PENDIENTE: reseña histórica de la Brigada Las Dichas — fundación, hitos, material mayor, etc.]
+      </p>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>Cuerpo de Bomberos de Casablanca</h4>
+          <p>Fundado el 22-04-1949. Al servicio voluntario de la comunidad de Casablanca.</p>
+        </div>
+        <div>
+          <h4>Navegación</h4>
+          <ul>
+            <li><a href="historia.html">Historia</a></li>
+            <li><a href="companias.html">Compañías</a></li>
+            <li><a href="galeria.html">Galería</a></li>
+            <li><a href="voluntarios.html">Hazte Voluntario</a></li>
+            <li><a href="privacidad.html">Política de Privacidad</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contacto</h4>
+          <ul>
+            <li>Alejandro Galaz 320, Sector El Molino</li>
+            <li>(32) 2742366</li>
+            <li>www.bomberoscasablanca.cl</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; <span id="anio"></span> Cuerpo de Bomberos de Casablanca. Todos los derechos reservados.
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <script>document.getElementById('anio').textContent = new Date().getFullYear();</script>
+</body>
+</html>
