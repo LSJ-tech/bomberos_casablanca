@@ -23,11 +23,12 @@ document.addEventListener('DOMContentLoaded', function () {
   // propio correo. Para activar un correo real, reemplaza su valor acá por
   // el endpoint de Formspree de esa compañía (https://formspree.io/f/XXXXXXX).
   var ENDPOINTS_COMPANIA = {
-    '1': null,        // PENDIENTE: Formspree de la Primera Compañía
-    '2': null,        // PENDIENTE: Formspree de la Segunda Compañía
-    '3': null,        // PENDIENTE: Formspree de la Tercera Compañía
-    '4': null,        // PENDIENTE: Formspree de la Cuarta Compañía
-    'brigada': null   // PENDIENTE: Formspree de la Brigada Las Dichas
+    '1': null,                  // PENDIENTE: Formspree de la Primera Compañía
+    '2': null,                  // PENDIENTE: Formspree de la Segunda Compañía
+    '3': null,                  // PENDIENTE: Formspree de la Tercera Compañía
+    '4': null,                  // PENDIENTE: Formspree de la Cuarta Compañía
+    'brigada-dichas': null,     // PENDIENTE: Formspree de la Brigada Las Dichas
+    'brigada-lagunillas': null  // PENDIENTE: Formspree de la Brigada Lagunillas
   };
 
   var form = document.getElementById('form-voluntario');
