@@ -747,7 +747,7 @@ section {
   margin-bottom: 2rem;
 }
 
-.footer-grid h4 {
+.footer-grid h3 {
   font-family: var(--font-display);
   font-weight: 600;
   color: var(--brass-bright);
