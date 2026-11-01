@@ -7,6 +7,7 @@
   --garnet-ink: #2a0a10;
   --brass: #a8822f;
   --brass-bright: #d8b45a;
+  --brass-dark: #7a5e20;
   --ivory: #faf7f0;
   --rosewash: #f4e7e2;
   --ink: #2a221d;
@@ -593,9 +594,9 @@ section {
   margin-top: 0.2rem;
 }
 
-.roster-lema {
+.roster-info p.roster-lema {
   font-style: italic;
-  color: var(--brass);
+  color: var(--brass-dark);
 }
 
 /* ---------- Galería ---------- */
@@ -857,7 +858,7 @@ section {
   display: block;
   font-size: 0.74rem;
   font-weight: 700;
-  color: var(--brass);
+  color: var(--brass-dark);
   letter-spacing: 0.3px;
   margin-bottom: 0.4rem;
 }
