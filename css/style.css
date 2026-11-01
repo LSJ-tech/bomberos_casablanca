@@ -626,54 +626,6 @@ section {
   object-fit: cover;
 }
 
-/* ---------- Formulario voluntario ---------- */
-
-.form-box {
-  background: var(--ivory);
-  border: 1px solid #e4d4c3;
-  border-radius: 4px;
-  padding: 2.25rem;
-  max-width: 640px;
-  margin: 0 auto;
-}
-
-.form-box h3 {
-  font-family: var(--font-display);
-  font-weight: 600;
-  font-size: 1.25rem;
-}
-
-.form-group {
-  margin-bottom: 1.2rem;
-}
-
-.form-group label {
-  display: block;
-  font-weight: 600;
-  margin-bottom: 0.4rem;
-  color: var(--garnet);
-  font-size: 0.92rem;
-}
-
-.form-group input,
-.form-group textarea,
-.form-group select {
-  width: 100%;
-  padding: 0.65rem 0.8rem;
-  border: 1px solid #c9b49a;
-  border-radius: 3px;
-  font-family: inherit;
-  font-size: 0.95rem;
-  background: #fff;
-}
-
-.form-group input:focus,
-.form-group textarea:focus,
-.form-group select:focus {
-  outline: 2px solid var(--brass-bright);
-  border-color: var(--brass);
-}
-
 .requisitos {
   list-style: none;
   border-top: 1px solid #e4d4c3;
