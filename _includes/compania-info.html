@@ -24,7 +24,7 @@
       </div>
       <div class="placa-col">
         <dt>Capitán</dt>
-        <dd class="placeholder-note">[PENDIENTE]</dd>
+        <dd{% unless include.capitan %} class="placeholder-note"{% endunless %}>{{ include.capitan | default: "[PENDIENTE]" }}</dd>
         <dt>Especialidad</dt>
         <dd{% unless include.especialidad %} class="placeholder-note"{% endunless %}>{{ include.especialidad | default: "[PENDIENTE]" }}</dd>
       </div>
