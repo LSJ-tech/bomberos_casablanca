@@ -386,7 +386,7 @@ section {
 
 .placeholder-note {
   font-style: italic;
-  color: #8a7b6e;
+  color: var(--ink-soft);
   font-size: 0.85rem;
 }
 
@@ -607,7 +607,7 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #a4917d;
+  color: var(--ink-soft);
   font-size: 0.85rem;
   text-align: center;
   padding: 1rem;
