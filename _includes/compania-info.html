@@ -9,10 +9,16 @@
   <div class="container-angosto">
     <p style="margin-bottom:1.75rem;"><a href="companias.html" style="color: var(--garnet); font-weight:700; border-bottom: 1px solid var(--brass);">&larr; Volver a Compañías</a></p>
 
-    <dl class="placa placa-grid" style="margin-bottom:2.5rem;">
+    {% if include.escudo %}
+    <div style="text-align:center; margin-bottom:2rem;">
+      <img src="{{ include.escudo }}" alt="Escudo {{ include.nombre }}" style="width:170px; filter: drop-shadow(0 6px 14px rgba(42,10,16,0.25)); margin: 0 auto;">
+    </div>
+    {% endif %}
+
+    <dl class="placa placa-grid" style="margin-bottom:1.75rem;">
       <div class="placa-col">
         <dt>Fecha de Fundación</dt>
-        <dd class="placeholder-note">[PENDIENTE]</dd>
+        <dd{% unless include.fundacion %} class="placeholder-note"{% endunless %}>{{ include.fundacion | default: "[PENDIENTE]" }}</dd>
         <dt>Dirección / Cuartel</dt>
         <dd class="placeholder-note">[PENDIENTE]</dd>
       </div>
@@ -20,15 +26,19 @@
         <dt>Capitán</dt>
         <dd class="placeholder-note">[PENDIENTE]</dd>
         <dt>Especialidad</dt>
-        <dd class="placeholder-note">[PENDIENTE]</dd>
+        <dd{% unless include.especialidad %} class="placeholder-note"{% endunless %}>{{ include.especialidad | default: "[PENDIENTE]" }}</dd>
       </div>
       <div class="placa-col">
         <dt>Teléfono</dt>
         <dd class="placeholder-note">[PENDIENTE]</dd>
-        <dt>Lema / Colores</dt>
-        <dd class="placeholder-note">[PENDIENTE]</dd>
+        <dt>Colores</dt>
+        <dd{% unless include.colores %} class="placeholder-note"{% endunless %}>{{ include.colores | default: "[PENDIENTE]" }}</dd>
       </div>
     </dl>
+
+    {% if include.nota %}
+    <p style="margin-bottom:1.75rem; color: var(--ink-soft); font-style: italic;">{{ include.nota }}</p>
+    {% endif %}
 
     <h3 style="font-family: var(--font-display); font-weight: 600; color: var(--garnet); margin-bottom:0.6rem;">Reseña</h3>
     <p class="placeholder-note">
