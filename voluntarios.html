@@ -39,7 +39,14 @@ nav: voluntarios
 
         <div id="form-mensaje" style="display:none; background:#e8f5e9; color:#2e7d32; padding:0.8rem 1rem; border-radius:3px; margin-bottom:1.2rem;">
           ¡Gracias por tu interés! Nos pondremos en contacto contigo pronto.
-          <br><small>[PENDIENTE: este formulario aún no envía datos a un servidor real — conectarlo a un correo o backend antes de publicar.]</small>
+        </div>
+
+        <div id="form-pendiente" style="display:none; background:#fdf3e0; color:#8a5a00; padding:0.8rem 1rem; border-radius:3px; margin-bottom:1.2rem;">
+          [PENDIENTE: el correo de esta compañía todavía no está conectado — avisa a Logan para activarlo. Mientras tanto, esta postulación no llegó a ningún lado.]
+        </div>
+
+        <div id="form-error" style="display:none; background:#fdecea; color:#b3261e; padding:0.8rem 1rem; border-radius:3px; margin-bottom:1.2rem;">
+          No se pudo enviar la postulación. Intenta de nuevo o escríbenos directamente a los datos de la página de <a href="contacto.html" style="color:#b3261e; font-weight:700;">Contacto</a>.
         </div>
 
         <form id="form-voluntario">
@@ -60,9 +67,9 @@ nav: voluntarios
             <input type="tel" id="telefono" name="telefono" required>
           </div>
           <div class="form-group">
-            <label for="compania">Compañía de interés (opcional)</label>
-            <select id="compania" name="compania">
-              <option value="">Sin preferencia</option>
+            <label for="compania">Compañía a la que postulas</label>
+            <select id="compania" name="compania" required>
+              <option value="" disabled selected>Selecciona una compañía</option>
               <option value="1">Primera Compañía</option>
               <option value="2">Segunda Compañía</option>
               <option value="3">Tercera Compañía</option>
