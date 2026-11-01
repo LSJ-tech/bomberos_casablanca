@@ -593,6 +593,11 @@ section {
   margin-top: 0.2rem;
 }
 
+.roster-lema {
+  font-style: italic;
+  color: var(--brass);
+}
+
 /* ---------- Galería ---------- */
 
 .galeria-grid {
