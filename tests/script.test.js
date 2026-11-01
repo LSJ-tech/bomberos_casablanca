@@ -67,3 +67,24 @@ describe('marcarEnlaceActivo', () => {
     expect(document.querySelector('a[href="index.html"]').classList.contains('active')).toBe(true);
   });
 });
+
+describe('cableado en DOMContentLoaded', () => {
+  test('al disparar DOMContentLoaded, se inicializa el toggle y se marca el enlace activo', () => {
+    document.body.innerHTML = `
+      <button class="nav-toggle">Menú</button>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="historia.html">Historia</a></li>
+        </ul>
+      </nav>
+    `;
+    setLocationPath('/historia.html');
+
+    document.dispatchEvent(new Event('DOMContentLoaded'));
+    document.querySelector('.nav-toggle').click();
+
+    expect(document.querySelector('.main-nav').classList.contains('open')).toBe(true);
+    expect(document.querySelector('a[href="historia.html"]').classList.contains('active')).toBe(true);
+  });
+});
