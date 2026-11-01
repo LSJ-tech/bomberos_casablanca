@@ -20,7 +20,7 @@
         <dt>Fecha de Fundación</dt>
         <dd{% unless include.fundacion %} class="placeholder-note"{% endunless %}>{{ include.fundacion | default: "[PENDIENTE]" }}</dd>
         <dt>Dirección / Cuartel</dt>
-        <dd class="placeholder-note">[PENDIENTE]</dd>
+        <dd{% unless include.direccion %} class="placeholder-note"{% endunless %}>{{ include.direccion | default: "[PENDIENTE]" }}</dd>
       </div>
       <div class="placa-col">
         <dt>Capitán</dt>
@@ -30,7 +30,7 @@
       </div>
       <div class="placa-col">
         <dt>Teléfono</dt>
-        <dd class="placeholder-note">[PENDIENTE]</dd>
+        <dd{% unless include.telefono %} class="placeholder-note"{% endunless %}>{{ include.telefono | default: "[PENDIENTE]" }}</dd>
         <dt>Colores</dt>
         <dd{% unless include.colores %} class="placeholder-note"{% endunless %}>{{ include.colores | default: "[PENDIENTE]" }}</dd>
       </div>
