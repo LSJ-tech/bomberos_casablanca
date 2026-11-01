@@ -31,8 +31,13 @@ describe('initNavToggle', () => {
     expect(document.querySelector('.main-nav').classList.contains('open')).toBe(false);
   });
 
-  test('no falla si falta el botón o el nav', () => {
+  test('no falla si falta el botón', () => {
     document.body.innerHTML = '<nav class="main-nav"></nav>';
+    expect(() => initNavToggle()).not.toThrow();
+  });
+
+  test('no falla si falta el nav', () => {
+    document.body.innerHTML = '<button class="nav-toggle">Menú</button>';
     expect(() => initNavToggle()).not.toThrow();
   });
 });
@@ -92,6 +97,20 @@ describe('initFormularioVoluntario', () => {
   test('no falla si no existe el formulario en la página', () => {
     document.body.innerHTML = '';
     expect(() => initFormularioVoluntario()).not.toThrow();
+  });
+
+  test('no falla si faltan los divs de mensaje en la página', () => {
+    document.body.innerHTML = `
+      <form id="form-voluntario">
+        <select name="compania">
+          <option value="1">Primera</option>
+        </select>
+      </form>
+    `;
+    initFormularioVoluntario();
+    expect(() => {
+      document.getElementById('form-voluntario').dispatchEvent(new Event('submit', { cancelable: true }));
+    }).not.toThrow();
   });
 
   test('sin endpoint configurado, muestra el aviso de "correo pendiente" y no llama a fetch', () => {
