@@ -811,6 +811,59 @@ section {
   color: var(--ink-soft);
 }
 
+/* ---------- Organigrama ---------- */
+
+.organigrama-nivel {
+  margin-bottom: 2.75rem;
+}
+
+.organigrama-nivel:last-child {
+  margin-bottom: 0;
+}
+
+.organigrama-nivel h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--garnet);
+  text-align: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid var(--brass);
+}
+
+.cargos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.25rem;
+}
+
+.cargo-card {
+  background: var(--ivory);
+  border: 1px solid #e4d4c3;
+  border-top: 3px solid var(--brass);
+  border-radius: 4px;
+  padding: 1.35rem;
+  text-align: center;
+}
+
+.cargo-titulo {
+  display: block;
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: var(--brass);
+  letter-spacing: 0.3px;
+  margin-bottom: 0.4rem;
+}
+
+.cargo-nombre {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: var(--ink);
+}
+
 /* ---------- 404 ---------- */
 
 .hero-ceremonial .btn + .btn-outline {
