@@ -23,6 +23,8 @@
         <dd{% unless include.direccion %} class="placeholder-note"{% endunless %}>{{ include.direccion | default: "[PENDIENTE]" }}</dd>
       </div>
       <div class="placa-col">
+        <dt>Director</dt>
+        <dd{% unless include.director %} class="placeholder-note"{% endunless %}>{{ include.director | default: "[PENDIENTE]" }}</dd>
         <dt>Capitán</dt>
         <dd{% unless include.capitan %} class="placeholder-note"{% endunless %}>{{ include.capitan | default: "[PENDIENTE]" }}</dd>
         <dt>Especialidad</dt>
