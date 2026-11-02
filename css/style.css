@@ -294,6 +294,56 @@ ul {
   flex-wrap: wrap;
 }
 
+/* Hero de Inicio: corte diagonal + composición a dos columnas en escritorio */
+
+.hero-inicio {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+  padding-bottom: 6.5rem;
+}
+
+.hero-inicio + .ledger {
+  position: relative;
+  z-index: 2;
+  margin-top: -4.5rem;
+}
+
+@media (min-width: 900px) {
+  .hero-inicio .container {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    align-items: center;
+    gap: 2.5rem;
+    text-align: left;
+  }
+
+  .hero-inicio .cresta-wrap {
+    order: 2;
+    width: 230px;
+    height: 230px;
+    margin: 0 auto;
+  }
+
+  .hero-inicio .cresta-wrap img {
+    inset: 26px;
+    width: calc(100% - 52px);
+    height: calc(100% - 52px);
+  }
+
+  .hero-inicio .hero-texto {
+    order: 1;
+  }
+
+  .hero-inicio h2,
+  .hero-inicio p {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .hero-inicio .hero-acciones {
+    justify-content: flex-start;
+  }
+}
+
 /* Hero compacto (páginas internas) */
 
 .hero-pagina {
@@ -374,6 +424,20 @@ section {
   font-weight: 600;
   font-size: 1.7rem;
   color: var(--garnet);
+}
+
+.section-title:not(.centrado) h2 {
+  padding-left: 1rem;
+  border-left: 4px solid var(--garnet);
+}
+
+.section-title.centrado h2::after {
+  content: '';
+  display: block;
+  width: 56px;
+  height: 3px;
+  background: var(--brass);
+  margin: 0.65rem auto 0;
 }
 
 .section-title p {
