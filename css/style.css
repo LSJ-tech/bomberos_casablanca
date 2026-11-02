@@ -962,6 +962,18 @@ section {
   color: var(--ink);
 }
 
+.cargo-email {
+  display: block;
+  margin-top: 0.4rem;
+  font-size: 0.82rem;
+  color: var(--garnet);
+  word-break: break-word;
+}
+
+.cargo-email:hover {
+  text-decoration-color: var(--brass);
+}
+
 .cargo-foto {
   width: 64px;
   height: 64px;
