@@ -932,7 +932,7 @@ section {
 
 .cargos-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 1.25rem;
 }
 
@@ -965,9 +965,9 @@ section {
 .cargo-email {
   display: block;
   margin-top: 0.4rem;
-  font-size: 0.82rem;
+  font-size: 0.74rem;
   color: var(--garnet);
-  word-break: break-word;
+  white-space: nowrap;
 }
 
 .cargo-email:hover {
