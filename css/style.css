@@ -645,11 +645,6 @@ section {
   flex-shrink: 0;
 }
 
-.roster-cruz {
-  color: var(--brass);
-  min-width: 3rem;
-  flex-shrink: 0;
-}
 
 .roster-info h3 {
   font-family: var(--font-display);
@@ -1037,13 +1032,6 @@ section {
   color: var(--ink-soft);
   font-style: italic;
   font-size: 0.9rem;
-}
-
-.material-en-preparacion {
-  color: var(--ink-soft);
-  font-style: italic;
-  font-size: 0.92rem;
-  line-height: 1.5;
 }
 
 /* ---------- 404 ---------- */
