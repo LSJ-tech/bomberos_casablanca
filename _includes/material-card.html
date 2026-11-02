@@ -1,0 +1,19 @@
+<div class="material-card">
+  {% if include.foto %}
+  <img src="{{ include.foto }}" alt="{{ include.tipo | default: 'Material mayor' }} de la {{ include.compania }}" class="material-foto" loading="lazy">
+  {% endif %}
+  <h3>{{ include.compania }}</h3>
+  <dl class="material-datos">
+    <dt>Tipo</dt>
+    <dd{% unless include.tipo %} class="placeholder-note"{% endunless %}>{{ include.tipo | default: "[PENDIENTE]" }}</dd>
+    <dt>Identificación</dt>
+    <dd{% unless include.identificacion %} class="placeholder-note"{% endunless %}>{{ include.identificacion | default: "[PENDIENTE]" }}</dd>
+    <dt>Año</dt>
+    <dd{% unless include.anio %} class="placeholder-note"{% endunless %}>{{ include.anio | default: "[PENDIENTE]" }}</dd>
+    <dt>Función</dt>
+    <dd{% unless include.funcion %} class="placeholder-note"{% endunless %}>{{ include.funcion | default: "[PENDIENTE]" }}</dd>
+  </dl>
+  {% if include.caracteristicas %}
+  <p class="material-nota">{{ include.caracteristicas }}</p>
+  {% endif %}
+</div>

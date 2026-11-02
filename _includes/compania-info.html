@@ -1,6 +1,7 @@
 <section class="hero-pagina">
   <div class="container">
     <h2>{{ include.nombre }}</h2>
+    {% if include.apodo %}<p class="compania-apodo">"{{ include.apodo }}"</p>{% endif %}
     <p>Al servicio de Casablanca.</p>
   </div>
 </section>

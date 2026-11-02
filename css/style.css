@@ -316,6 +316,12 @@ ul {
   margin: 0 auto;
 }
 
+.compania-apodo {
+  font-style: italic;
+  color: var(--brass-bright);
+  margin-bottom: 0.4rem;
+}
+
 /* ---------- Botones ---------- */
 
 .btn {
@@ -599,6 +605,14 @@ section {
   color: var(--brass-dark);
 }
 
+.roster-info p.roster-apodo {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  color: var(--ink-soft);
+  margin-top: 0;
+}
+
 /* ---------- Galería ---------- */
 
 .galeria-grid {
@@ -821,6 +835,71 @@ section {
   font-weight: 600;
   font-size: 1.05rem;
   color: var(--ink);
+}
+
+.cargo-foto {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 0.6rem;
+  border: 2px solid var(--brass);
+}
+
+/* ---------- Material Mayor ---------- */
+
+.material-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.material-card {
+  background: var(--ivory);
+  border: 1px solid #e4d4c3;
+  border-top: 3px solid var(--garnet);
+  border-radius: 4px;
+  padding: 1.5rem;
+}
+
+.material-foto {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+.material-card h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.15rem;
+  color: var(--garnet);
+  margin-bottom: 0.9rem;
+}
+
+.material-datos {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.3rem 0.8rem;
+}
+
+.material-datos dt {
+  font-weight: 600;
+  color: var(--ink-soft);
+  font-size: 0.85rem;
+}
+
+.material-datos dd {
+  font-size: 0.95rem;
+}
+
+.material-nota {
+  margin-top: 0.9rem;
+  color: var(--ink-soft);
+  font-style: italic;
+  font-size: 0.9rem;
 }
 
 /* ---------- 404 ---------- */
