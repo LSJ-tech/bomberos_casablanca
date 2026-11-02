@@ -638,6 +638,67 @@ section {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  cursor: zoom-in;
+}
+
+/* ---------- Lightbox ---------- */
+
+.lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(20, 8, 10, 0.92);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+  padding: 2rem;
+}
+
+.lightbox-overlay.abierto {
+  display: flex;
+}
+
+.lightbox-imagen {
+  max-width: min(90vw, 1100px);
+  max-height: 85vh;
+  object-fit: contain;
+  border: 2px solid var(--brass);
+}
+
+.lightbox-cerrar,
+.lightbox-anterior,
+.lightbox-siguiente {
+  position: absolute;
+  background: transparent;
+  border: none;
+  color: var(--ivory);
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+}
+
+.lightbox-cerrar {
+  top: 1rem;
+  right: 1.5rem;
+}
+
+.lightbox-anterior {
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.lightbox-siguiente {
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.lightbox-cerrar:hover,
+.lightbox-anterior:hover,
+.lightbox-siguiente:hover {
+  color: var(--brass-bright);
 }
 
 .requisitos {

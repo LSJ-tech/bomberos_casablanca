@@ -1,4 +1,4 @@
-const { initNavToggle, marcarEnlaceActivo } = require('../js/script.js');
+const { initNavToggle, marcarEnlaceActivo, initLightbox } = require('../js/script.js');
 
 function setLocationPath(pathname) {
   window.history.pushState({}, '', pathname);
@@ -65,6 +65,103 @@ describe('marcarEnlaceActivo', () => {
     marcarEnlaceActivo();
 
     expect(document.querySelector('a[href="index.html"]').classList.contains('active')).toBe(true);
+  });
+});
+
+describe('initLightbox', () => {
+  afterEach(() => {
+    document.querySelectorAll('.lightbox-overlay').forEach(function (el) {
+      el.remove();
+    });
+  });
+
+  test('no falla si no existe la galería', () => {
+    document.body.innerHTML = '<main></main>';
+    expect(() => initLightbox()).not.toThrow();
+    expect(document.querySelector('.lightbox-overlay')).toBeNull();
+  });
+
+  test('no crea el overlay si la galería no tiene fotos reales', () => {
+    document.body.innerHTML = `
+      <div class="galeria-grid">
+        <div class="galeria-item">Foto pendiente</div>
+      </div>
+    `;
+    initLightbox();
+    expect(document.querySelector('.lightbox-overlay')).toBeNull();
+  });
+
+  test('abre el lightbox con la foto, navega y cierra', () => {
+    document.body.innerHTML = `
+      <div class="galeria-grid">
+        <div class="galeria-item"><img src="img/uno.jpg" alt="Uno"></div>
+        <div class="galeria-item"><img src="img/dos.jpg" alt="Dos"></div>
+      </div>
+    `;
+    initLightbox();
+
+    const imgs = document.querySelectorAll('.galeria-item img');
+    const overlay = document.querySelector('.lightbox-overlay');
+    const lightboxImg = overlay.querySelector('.lightbox-imagen');
+
+    imgs[0].click();
+    expect(overlay.classList.contains('abierto')).toBe(true);
+    expect(lightboxImg.alt).toBe('Uno');
+
+    overlay.querySelector('.lightbox-siguiente').click();
+    expect(lightboxImg.alt).toBe('Dos');
+
+    overlay.querySelector('.lightbox-siguiente').click();
+    expect(lightboxImg.alt).toBe('Uno');
+
+    overlay.querySelector('.lightbox-anterior').click();
+    expect(lightboxImg.alt).toBe('Dos');
+
+    overlay.querySelector('.lightbox-cerrar').click();
+    expect(overlay.classList.contains('abierto')).toBe(false);
+  });
+
+  test('se cierra al hacer clic fuera de la imagen, pero no al hacer clic dentro', () => {
+    document.body.innerHTML = `
+      <div class="galeria-grid">
+        <div class="galeria-item"><img src="img/uno.jpg" alt="Uno"></div>
+      </div>
+    `;
+    initLightbox();
+    const overlay = document.querySelector('.lightbox-overlay');
+    document.querySelector('.galeria-item img').click();
+
+    overlay.querySelector('.lightbox-imagen').click();
+    expect(overlay.classList.contains('abierto')).toBe(true);
+
+    overlay.click();
+    expect(overlay.classList.contains('abierto')).toBe(false);
+  });
+
+  test('el teclado navega y cierra solo cuando el lightbox está abierto', () => {
+    document.body.innerHTML = `
+      <div class="galeria-grid">
+        <div class="galeria-item"><img src="img/uno.jpg" alt="Uno"></div>
+        <div class="galeria-item"><img src="img/dos.jpg" alt="Dos"></div>
+      </div>
+    `;
+    initLightbox();
+    const overlay = document.querySelector('.lightbox-overlay');
+    const lightboxImg = overlay.querySelector('.lightbox-imagen');
+
+    document.dispatchEvent(new KeyboardEvent('keydown', { key: 'ArrowRight' }));
+    expect(overlay.classList.contains('abierto')).toBe(false);
+
+    document.querySelectorAll('.galeria-item img')[0].click();
+
+    document.dispatchEvent(new KeyboardEvent('keydown', { key: 'ArrowRight' }));
+    expect(lightboxImg.alt).toBe('Dos');
+
+    document.dispatchEvent(new KeyboardEvent('keydown', { key: 'ArrowLeft' }));
+    expect(lightboxImg.alt).toBe('Uno');
+
+    document.dispatchEvent(new KeyboardEvent('keydown', { key: 'Escape' }));
+    expect(overlay.classList.contains('abierto')).toBe(false);
   });
 });
 
