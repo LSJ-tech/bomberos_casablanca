@@ -96,6 +96,26 @@ ul {
   flex-shrink: 0;
 }
 
+/* ---------- Saltar al contenido ---------- */
+
+.skip-link {
+  position: absolute;
+  top: -3rem;
+  left: 0.75rem;
+  z-index: 200;
+  background: var(--brass-bright);
+  color: var(--garnet-ink);
+  font-weight: 700;
+  padding: 0.65rem 1.1rem;
+  border-radius: 0 0 4px 4px;
+  text-decoration: none;
+  transition: top var(--duracion-transicion);
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
 /* ---------- Header ---------- */
 
 .site-header {
@@ -1034,8 +1054,3 @@ section {
   font-size: 0.9rem;
 }
 
-/* ---------- 404 ---------- */
-
-.hero-ceremonial .btn + .btn-outline {
-  margin-left: 0.8rem;
-}
