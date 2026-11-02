@@ -182,9 +182,18 @@ ul {
 }
 
 @media (max-width: 480px) {
+  .brand {
+    flex-shrink: 1;
+    min-width: 0;
+  }
+
   .brand img {
     width: 64px;
     height: 64px;
+  }
+
+  .brand-text {
+    min-width: 0;
   }
 
   .brand-text h1 {
@@ -195,6 +204,7 @@ ul {
 
   .brand-text span {
     font-size: 0.72rem;
+    white-space: normal;
   }
 }
 
