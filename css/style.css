@@ -146,8 +146,8 @@ ul {
 }
 
 .brand img {
-  width: 60px;
-  height: 60px;
+  width: 78px;
+  height: 78px;
   object-fit: contain;
   filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.5));
   flex-shrink: 0;
@@ -156,7 +156,7 @@ ul {
 .brand-text h1 {
   font-family: var(--font-display);
   font-weight: 600;
-  font-size: 1.15rem;
+  font-size: 1.5rem;
   letter-spacing: 0.2px;
   white-space: nowrap;
   overflow: hidden;
@@ -164,10 +164,10 @@ ul {
 }
 
 .brand-text span {
-  font-size: 0.76rem;
+  font-size: 0.82rem;
   color: var(--brass-bright);
   display: block;
-  margin-top: 0.1rem;
+  margin-top: 0.15rem;
   white-space: nowrap;
 }
 
@@ -182,12 +182,17 @@ ul {
 }
 
 @media (max-width: 480px) {
+  .brand img {
+    width: 56px;
+    height: 56px;
+  }
+
   .brand-text h1 {
-    font-size: 0.92rem;
+    font-size: 1.12rem;
   }
 
   .brand-text span {
-    font-size: 0.68rem;
+    font-size: 0.72rem;
   }
 }
 
