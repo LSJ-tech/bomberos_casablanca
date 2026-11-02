@@ -902,6 +902,13 @@ section {
   font-size: 0.9rem;
 }
 
+.material-en-preparacion {
+  color: var(--ink-soft);
+  font-style: italic;
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
 /* ---------- 404 ---------- */
 
 .hero-ceremonial .btn + .btn-outline {

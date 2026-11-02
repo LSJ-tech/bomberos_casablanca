@@ -19,19 +19,19 @@
     <dl class="placa placa-grid" style="margin-bottom:1.75rem;">
       <div class="placa-col">
         <dt>Fecha de Fundación</dt>
-        <dd{% unless include.fundacion %} class="placeholder-note"{% endunless %}>{{ include.fundacion | default: "[PENDIENTE]" }}</dd>
+        <dd{% unless include.fundacion %} class="placeholder-note"{% endunless %}>{{ include.fundacion | default: "Por confirmar" }}</dd>
         <dt>Dirección / Cuartel</dt>
-        <dd{% unless include.direccion %} class="placeholder-note"{% endunless %}>{{ include.direccion | default: "[PENDIENTE]" }}</dd>
+        <dd{% unless include.direccion %} class="placeholder-note"{% endunless %}>{{ include.direccion | default: "Por confirmar" }}</dd>
         <dt>Colores</dt>
-        <dd{% unless include.colores %} class="placeholder-note"{% endunless %}>{{ include.colores | default: "[PENDIENTE]" }}</dd>
+        <dd{% unless include.colores %} class="placeholder-note"{% endunless %}>{{ include.colores | default: "Por confirmar" }}</dd>
       </div>
       <div class="placa-col">
         <dt>Director</dt>
-        <dd{% unless include.director %} class="placeholder-note"{% endunless %}>{{ include.director | default: "[PENDIENTE]" }}</dd>
+        <dd{% unless include.director %} class="placeholder-note"{% endunless %}>{{ include.director | default: "Por confirmar" }}</dd>
         <dt>Capitán</dt>
-        <dd{% unless include.capitan %} class="placeholder-note"{% endunless %}>{{ include.capitan | default: "[PENDIENTE]" }}</dd>
+        <dd{% unless include.capitan %} class="placeholder-note"{% endunless %}>{{ include.capitan | default: "Por confirmar" }}</dd>
         <dt>Especialidad</dt>
-        <dd{% unless include.especialidad %} class="placeholder-note"{% endunless %}>{{ include.especialidad | default: "[PENDIENTE]" }}</dd>
+        <dd{% unless include.especialidad %} class="placeholder-note"{% endunless %}>{{ include.especialidad | default: "Por confirmar" }}</dd>
       </div>
     </dl>
 
