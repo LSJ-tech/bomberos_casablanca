@@ -183,12 +183,14 @@ ul {
 
 @media (max-width: 480px) {
   .brand img {
-    width: 56px;
-    height: 56px;
+    width: 64px;
+    height: 64px;
   }
 
   .brand-text h1 {
-    font-size: 1.12rem;
+    font-size: 1.02rem;
+    white-space: normal;
+    line-height: 1.15;
   }
 
   .brand-text span {
