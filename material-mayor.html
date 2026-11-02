@@ -22,20 +22,21 @@ nav: material-mayor
   </section>
 
   <section>
-    <div class="container">
-      <!-- NOTA INTERNA: confirmar con cada compañía/brigada el listado real de material mayor (tipo de carro,
-           identificación, año, función y características) antes de completar estas fichas. -->
-
-      <div class="material-grid">
-        {% include material-card.html compania="Primera Compañía" %}
-        {% include material-card.html compania="Segunda Compañía" %}
-        {% include material-card.html compania="Tercera Compañía" %}
-        {% include material-card.html compania="Cuarta Compañía" %}
-        {% include material-card.html compania="Brigada Las Dichas" %}
-        {% include material-card.html compania="Brigada Lagunillas" %}
-      </div>
+    <div class="container-angosto" style="text-align:center;">
+      <p style="color: var(--ink-soft); font-size:1.05rem;">
+        El Cuerpo de Bomberos de Casablanca cuenta con material mayor (carros bomba y equipos de rescate) en sus
+        4 compañías y 2 brigadas. Esta sección se publicará con el detalle de cada unidad —fotografía,
+        identificación, tipo y función— en cuanto el Cuerpo confirme esa información.
+      </p>
     </div>
   </section>
+
+  <!-- NOTA INTERNA: cuando cada compañía/brigada confirme su material mayor (tipo de carro, identificación, año,
+       función y características), reemplazar la sección de arriba por un <div class="material-grid"> dentro de
+       un <div class="container">, con un include de _includes/material-card.html por unidad (compania, tipo,
+       identificacion, anio, funcion; foto y caracteristicas son opcionales). Ver _includes/material-card.html
+       para los parámetros exactos. -->
+
 
 </main>
 

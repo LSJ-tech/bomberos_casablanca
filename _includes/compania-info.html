@@ -16,33 +16,27 @@
     </div>
     {% endif %}
 
+    {% if include.fundacion or include.direccion or include.colores or include.director or include.capitan or include.especialidad %}
     <dl class="placa placa-grid" style="margin-bottom:1.75rem;">
+      {% if include.fundacion or include.direccion or include.colores %}
       <div class="placa-col">
-        <dt>Fecha de Fundación</dt>
-        <dd{% unless include.fundacion %} class="placeholder-note"{% endunless %}>{{ include.fundacion | default: "Por confirmar" }}</dd>
-        <dt>Dirección / Cuartel</dt>
-        <dd{% unless include.direccion %} class="placeholder-note"{% endunless %}>{{ include.direccion | default: "Por confirmar" }}</dd>
-        <dt>Colores</dt>
-        <dd{% unless include.colores %} class="placeholder-note"{% endunless %}>{{ include.colores | default: "Por confirmar" }}</dd>
+        {% if include.fundacion %}<dt>Fecha de Fundación</dt><dd>{{ include.fundacion }}</dd>{% endif %}
+        {% if include.direccion %}<dt>Dirección / Cuartel</dt><dd>{{ include.direccion }}</dd>{% endif %}
+        {% if include.colores %}<dt>Colores</dt><dd>{{ include.colores }}</dd>{% endif %}
       </div>
+      {% endif %}
+      {% if include.director or include.capitan or include.especialidad %}
       <div class="placa-col">
-        <dt>Director</dt>
-        <dd{% unless include.director %} class="placeholder-note"{% endunless %}>{{ include.director | default: "Por confirmar" }}</dd>
-        <dt>Capitán</dt>
-        <dd{% unless include.capitan %} class="placeholder-note"{% endunless %}>{{ include.capitan | default: "Por confirmar" }}</dd>
-        <dt>Especialidad</dt>
-        <dd{% unless include.especialidad %} class="placeholder-note"{% endunless %}>{{ include.especialidad | default: "Por confirmar" }}</dd>
+        {% if include.director %}<dt>Director</dt><dd>{{ include.director }}</dd>{% endif %}
+        {% if include.capitan %}<dt>Capitán</dt><dd>{{ include.capitan }}</dd>{% endif %}
+        {% if include.especialidad %}<dt>Especialidad</dt><dd>{{ include.especialidad }}</dd>{% endif %}
       </div>
+      {% endif %}
     </dl>
+    {% endif %}
 
     {% if include.nota %}
     <p style="margin-bottom:1.75rem; color: var(--ink-soft); font-style: italic;">{{ include.nota }}</p>
     {% endif %}
-
-    <!-- NOTA INTERNA: agregar reseña histórica de la {{ include.nombre }} (fundación, hitos, etc.) cuando esté
-         disponible, descomentando el bloque de abajo.
-    <h3 style="font-family: var(--font-display); font-weight: 600; color: var(--garnet); margin-bottom:0.6rem;">Reseña</h3>
-    <p>[Reseña histórica de la {{ include.nombre }}]</p>
-    -->
   </div>
 </section>

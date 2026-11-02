@@ -5,17 +5,11 @@
   <h3>{{ include.compania }}</h3>
   {% if include.tipo or include.identificacion or include.anio or include.funcion %}
   <dl class="material-datos">
-    <dt>Tipo</dt>
-    <dd{% unless include.tipo %} class="placeholder-note"{% endunless %}>{{ include.tipo | default: "Por confirmar" }}</dd>
-    <dt>Identificación</dt>
-    <dd{% unless include.identificacion %} class="placeholder-note"{% endunless %}>{{ include.identificacion | default: "Por confirmar" }}</dd>
-    <dt>Año</dt>
-    <dd{% unless include.anio %} class="placeholder-note"{% endunless %}>{{ include.anio | default: "Por confirmar" }}</dd>
-    <dt>Función</dt>
-    <dd{% unless include.funcion %} class="placeholder-note"{% endunless %}>{{ include.funcion | default: "Por confirmar" }}</dd>
+    {% if include.tipo %}<dt>Tipo</dt><dd>{{ include.tipo }}</dd>{% endif %}
+    {% if include.identificacion %}<dt>Identificación</dt><dd>{{ include.identificacion }}</dd>{% endif %}
+    {% if include.anio %}<dt>Año</dt><dd>{{ include.anio }}</dd>{% endif %}
+    {% if include.funcion %}<dt>Función</dt><dd>{{ include.funcion }}</dd>{% endif %}
   </dl>
-  {% else %}
-  <p class="material-en-preparacion">Ficha en preparación. Se publicará cuando la unidad confirme los datos de su material mayor.</p>
   {% endif %}
   {% if include.caracteristicas %}
   <p class="material-nota">{{ include.caracteristicas }}</p>

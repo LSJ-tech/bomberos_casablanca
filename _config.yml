@@ -1,0 +1,10 @@
+exclude:
+  - VALIDACION-INSTITUCIONAL.md
+  - README.md
+  - "Cuerpo de bomberos de casablanca.jpeg"
+  - package.json
+  - package-lock.json
+  - node_modules
+  - tests
+  - coverage
+  - sonar-project.properties
